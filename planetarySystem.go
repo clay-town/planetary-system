@@ -22,7 +22,7 @@ type Planet struct {
 }
 
 func main(){
-  rand.Seed(time.Now().UnixNano())
+  rand.Seed(time.Now().UnixNano()) //why do we have to see this? I need to read more about it (found on StackOverflow)
   var reader = bufio.NewReader(os.Stdin)
   rLoc := rand.Intn(8)
 
@@ -83,9 +83,6 @@ func readJsonFile(loc int) (string, string){
   defer jsonFile.Close()
   return planets.Planets[loc].Name, planets.Planets[loc].Description
 }
-
-
-
 
 func greeting(reader *bufio.Reader) string{
   //var dest = "Traveling to Pluto...Arrived at Pluto. I don't care what they say - it's a planet\n"
