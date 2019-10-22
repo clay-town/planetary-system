@@ -10,8 +10,8 @@ import (
         "encoding/json"
         "io/ioutil"
         "time"
+        "math/rand"
 )
-import "math/rand"
 
 type Planets struct {
   Planets []Planet `json:"planets"`
@@ -105,22 +105,3 @@ func yesOrNo(reader *bufio.Reader) bool{
   return yesOrNo(reader)
 
 }
-
-
-
-// func scanner() {
-//   scanner := bufio.NewScanner(os.Stdin)
-//   for scanner.Scan() {
-//     fmt.Println(scanner.Text())
-//     return
-//   }
-// }
-
-//ReadRune() for single character input
-//ReadString() for name input,
-
-// this works, but only take the input upto the first whitespace
-// fmt.Print("Enter text: ")
-// var input string
-// fmt.Scanln(&input)
-// fmt.Print(input)
